@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useLanguage } from '@/app/context/LanguageContext'; // ✅ Added
+import { useLanguage } from '@/app/context/LanguageContext';
 import { getTreatmentIdFromLabel } from '@/app/data/treatmentsData';
 
 const CountUp = ({ end, duration = 2000, suffix = '' }) => {
@@ -70,17 +70,14 @@ const TreatmentItem = ({ icon, label, onClick }) => (
   </div>
 );
 
-export default function MedicalTreatmentsPage() {
+// Separate component that uses useSearchParams
+function MedicalTreatmentsContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-
-  // ✅ Use LanguageContext (like Navbar/Hero)
   const { lang } = useLanguage();
 
-  // Fallback to URL param if context not available
   const currentLang = lang || searchParams.get('lang') || 'hi';
 
-  // ✅ Dynamic bilingual treatments
   const treatments = currentLang === 'en' ? [
     { icon: 'https://cdn-icons-png.flaticon.com/128/8670/8670680.png', label: 'Cataract' },
     { icon: 'https://cdn-icons-png.flaticon.com/128/18812/18812542.png', label: 'Glaucoma' },
@@ -140,7 +137,6 @@ export default function MedicalTreatmentsPage() {
     router.push(`/treatment/${encodeURIComponent(treatmentId)}?lang=${currentLang}`);
   };
 
-  // ✅ Bilingual titles & stats from LanguageContext
   const pageTitle = currentLang === 'en' ? 'Treatments We Provide' : 'हमारे द्वारा प्रदान किए जाने वाले उपचार';
   const stats = currentLang === 'en' ? {
     consulted: 'Consulted Patients',
@@ -156,10 +152,8 @@ export default function MedicalTreatmentsPage() {
 
   return (
     <div className="bg-white">
-      {/* Header spacing for fixed navbar */}
       <div className="h-20 sm:h-24 md:h-28"></div>
 
-      {/* Treatments Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium uppercase bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
@@ -173,7 +167,6 @@ export default function MedicalTreatmentsPage() {
           </p>
         </div>
 
-        {/* Treatment Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4 sm:gap-6 lg:gap-8 mb-20">
           {treatments.map((treatment, index) => (
             <TreatmentItem
@@ -186,7 +179,6 @@ export default function MedicalTreatmentsPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="bg-white/80 backdrop-blur-sm border-t border-gray-200 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-20">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -221,5 +213,14 @@ export default function MedicalTreatmentsPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+// Main component with Suspense wrapper
+export default function MedicalTreatmentsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <MedicalTreatmentsContent />
+    </Suspense>
   );
 }
