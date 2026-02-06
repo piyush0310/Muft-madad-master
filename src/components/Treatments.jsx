@@ -153,13 +153,12 @@ function MedicalTreatmentsContent() {
   return (
     <div className="bg-white">
       <div className="h-20 sm:h-24 md:h-28"></div>
-
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-medium uppercase bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium uppercase bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
             {pageTitle}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             {currentLang === 'en'
               ? 'Free treatment available for 25+ major diseases with up to 80% discount'
               : '25+ प्रमुख रोगों का निःशुल्क इलाज 80% तक छूट के साथ उपलब्ध'
@@ -180,34 +179,34 @@ function MedicalTreatmentsContent() {
       </section>
 
       <section className="bg-white/80 backdrop-blur-sm ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 lg:pb-16 pt-6">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             <div className="group text-center">
-              <div className="text-4xl  font-medium text-gray-900 mb-4 bg-linear-to-r from-green-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-3xl md:text-4xl  font-medium text-gray-900 mb-4 bg-linear-to-r from-green-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={1000} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl font-medium text-gray-700">{stats.consulted}</p>
+              <p className="text-md lg:text-xl font-medium text-gray-700">{stats.consulted}</p>
             </div>
 
             <div className="group text-center">
-              <div className="text-4xl font-medium text-gray-900 mb-4 bg-linear-to-r from-orange-500 to-red-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-3xl md:text-4xl   font-medium text-gray-900 mb-4 bg-linear-to-r from-orange-500 to-red-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={200} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl  font-medium text-gray-700">{stats.surgeries}</p>
+              <p className="text-md lg:text-xl font-medium text-gray-700">{stats.surgeries}</p>
             </div>
 
             <div className="group text-center">
-              <div className="text-4xl font-medium text-gray-900 mb-4 bg-linear-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-3xl md:text-4xl   font-medium text-gray-900 mb-4 bg-linear-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={5} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl  font-medium text-gray-700">{stats.cities}</p>
+              <p className="text-md lg:text-xl font-medium text-gray-700">{stats.cities}</p>
             </div>
 
             <div className="group text-center">
-              <div className="text-4xl font-medium text-gray-900 mb-4 bg-linear-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-3xl md:text-4xl   font-medium text-gray-900 mb-4 bg-linear-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={12} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl font-semibold text-gray-700">{stats.hospitals}</p>
+              <p className="text-md lg:text-xl font-semibold text-gray-700">{stats.hospitals}</p>
             </div>
           </div>
         </div>

@@ -139,10 +139,10 @@ export default function PatientTestimonials() {
       <div className="relative max-w-7xl mx-auto z-10">
         {/* Section Title */}
         <div className="text-center mb-16 lg:mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif uppercase font-medium bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif uppercase font-medium bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
             {sectionTitle}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             {lang === 'en' ? '500+ Happy Patients • 100% Success Rate' : '500+ खुश मरीज • 100% सफलता दर'}
           </p>
         </div>

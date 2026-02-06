@@ -43,17 +43,17 @@ export default function WhyChooseMuftMadad() {
   const sectionTitle = lang === 'en' ? 'Why Choose Muft Madad?' : 'मुफ़्त मदद क्यों चुनें?';
 
   return (
-    <section className="relative w-full py-14 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative w-full py-8 lg:py-14 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-linear(circle_at_20%_80%,rgba(34,197,94,0.1),transparent)] opacity-50"></div>
 
       <div className="relative max-w-7xl mx-auto z-10">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif  uppercase font-medium bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif  uppercase font-medium bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
             {sectionTitle}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             {lang === 'en' ? 'Trusted by 500+ patients for free treatment' : '500+ मरीजों का विश्वास निःशुल्क इलाज के लिए'}
           </p>
         </div>

@@ -10,7 +10,7 @@ const   HeroContent = () => {
   const content = bannerData[lang];
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 mt-30">
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 mt-20 lg:mt-26">
       <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6 sm:space-y-8">

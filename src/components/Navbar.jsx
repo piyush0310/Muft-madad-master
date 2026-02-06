@@ -3,6 +3,7 @@ import React from 'react';
 import { Phone, MapPin, ChevronDown, Globe } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/app/context/LanguageContext';
+import Link from 'next/link';
 
 const Navbar = () => {
     const [isCityDropdownOpen, setIsCityDropdownOpen] = React.useState(false);
@@ -59,17 +60,19 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 min-w-0">
                 {/* Logo */}
                 <div className="flex items-center flex-shrink-0">
-                    <img
-                        src="/logo.png"
-                        alt="Muft Madad Logo"
-                        className="h-14 w-24 sm:h-20 sm:w-36 md:h-24 md:w-40 object-cover"
-                        onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'flex';
-                        }}
-                    />
+                    <Link href='/'>
+                        <img
+                            src="/logo.jpeg"
+                            alt="Muft Madad Logo"
+                            className="h-10 pt-1 sm:h-12 md:h-14 w-20 object-cover"
+                            onError={(e) => {
+                                e.target.style.display = 'none';
+                                e.target.nextSibling.style.display = 'flex';
+                            }}
+                        />
+                    </Link>
                     <div
-                        className="hidden items-center justify-center bg-teal-600 text-white font-bold text-xl px-3 py-1 rounded"
+                        className="hidden items-center justify-center bg-teal-600 text-white font-bold text-lg sm:text-xl px-3 py-1 rounded"
                         style={{ display: 'none' }}
                     >
                         {lang === 'en' ? 'Muft Madad' : 'मुफ्त मदद'}
@@ -146,7 +149,7 @@ const Navbar = () => {
                                     <button
                                         key={city}
                                         // onClick={() => handleCitySelect(city)}
-                                        onClick={() => window.location.href="/"}
+                                        onClick={() => window.location.href = "/"}
                                         className={`block w-full cursor-pointer text-left px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition ${index !== cities.length - 1 ? 'border-b border-gray-100' : ''} ${selectedCity === city ? 'bg-red-50 text-red-600 font-semibold border-l-4 border-red-500' : ''}`}
                                     >
                                         {city}

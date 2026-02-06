@@ -91,17 +91,17 @@ export default function OurSpecialities() {
   const pageTitle = lang === 'en' ? 'Our Medical Specialties' : 'हमारी चिकित्सा विशेषताएँ';
 
   return (
-    <div className="  py-12 sm:py-14 px-4 sm:px-6 lg:px-8">
+    <div className="pb-14 pt-0 lg:pt-14 px-4 sm:px-6 lg:px-8">
       {/* Header spacing for fixed navbar */}
       <div className="h-20 sm:h-24 md:h-28 lg:hidden"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Page Title */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-4xl md:text-5xl uppercase font-medium font-serif bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl uppercase font-medium font-serif bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
             {pageTitle}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-md md:text-xl text-gray-600 max-w-3xl mx-auto">
             {lang === 'en'
               ? 'Expert care in 10+ medical specialties with free consultations & up to 80% surgery discounts'
               : '10+ चिकित्सा विशेषताओं में विशेषज्ञ देखभाल, निःशुल्क परामर्श व 80% तक सर्जरी छूट'
@@ -123,7 +123,7 @@ export default function OurSpecialities() {
                   alt={speciality.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent"></div>
               </div>
 
               {/* Content */}
@@ -138,7 +138,7 @@ export default function OurSpecialities() {
 
                 <button
                   onClick={() => handleSpecialityClick(speciality.id)}
-                  className="w-full group/btn flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-2 px-4 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-300 border border-blue-500/30 hover:border-blue-400/50 group-hover/btn:scale-105 cursor-pointer"
+                  className="w-full group/btn flex items-center justify-center gap-1.5 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-2 px-4 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-300 border border-blue-500/30 hover:border-blue-400/50 group-hover/btn:scale-105 cursor-pointer"
                 >
                   <span>{lang === 'en' ? 'Learn More' : 'विस्तार से जानें'}</span>
                   <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
