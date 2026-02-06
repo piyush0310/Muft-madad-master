@@ -159,7 +159,7 @@ function MedicalTreatmentsContent() {
           <h1 className="text-4xl md:text-5xl font-serif font-medium uppercase bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
             {pageTitle}
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {currentLang === 'en'
               ? 'Free treatment available for 25+ major diseases with up to 80% discount'
               : '25+ प्रमुख रोगों का निःशुल्क इलाज 80% तक छूट के साथ उपलब्ध'
