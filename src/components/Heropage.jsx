@@ -5,7 +5,7 @@ import { Phone } from 'lucide-react';
 import { useLanguage } from '@/app/context/LanguageContext';
 import bannerData from '@/app/content/HeroData';
 
-const HeroContent = () => {
+const   HeroContent = () => {
   const { lang } = useLanguage();
   const content = bannerData[lang];
 
@@ -14,7 +14,7 @@ const HeroContent = () => {
       <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6 sm:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium uppercase text-gray-900 leading-tight tracking-widest">
             {content.title}
             <br />
             {content.subtitle}

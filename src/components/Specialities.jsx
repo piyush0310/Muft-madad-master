@@ -91,17 +91,17 @@ export default function OurSpecialities() {
   const pageTitle = lang === 'en' ? 'Our Medical Specialties' : 'हमारी चिकित्सा विशेषताएँ';
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-blue-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <div className="  py-12 sm:py-14 px-4 sm:px-6 lg:px-8">
       {/* Header spacing for fixed navbar */}
       <div className="h-20 sm:h-24 md:h-28 lg:hidden"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Page Title */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl uppercase font-medium bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
+          <h1 className="text-4xl md:text-5xl uppercase font-medium font-serif bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
             {pageTitle}
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {lang === 'en'
               ? 'Expert care in 10+ medical specialties with free consultations & up to 80% surgery discounts'
               : '10+ चिकित्सा विशेषताओं में विशेषज्ञ देखभाल, निःशुल्क परामर्श व 80% तक सर्जरी छूट'
@@ -110,38 +110,38 @@ export default function OurSpecialities() {
         </div>
 
         {/* Specialties Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {specialities.map((speciality, index) => (
             <div
               key={index}
-              className="group bg-white/90 backdrop-blur-sm rounded-3xl border border-white/50 hover:border-blue-200 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02]"
+              className="group bg-white/90 backdrop-blur-sm rounded-2xl border border-white/50 hover:border-blue-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Image */}
-              <div className="relative overflow-hidden h-48 sm:h-56 lg:h-64">
+              <div className="relative overflow-hidden h-32 sm:h-36 lg:h-40">
                 <img
                   src={speciality.image}
                   alt={speciality.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
               {/* Content */}
-              <div className="p-6 sm:p-8 lg:p-10">
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+              <div className="p-4 sm:p-5 lg:p-6">
+                <h3 className="text-base sm:text-lg lg:text-xl font-medium text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                   {speciality.title}
                 </h3>
 
-                <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-6 line-clamp-3">
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3 sm:mb-4 line-clamp-2">
                   {speciality.description}
                 </p>
 
                 <button
                   onClick={() => handleSpecialityClick(speciality.id)}
-                  className="w-full group/btn flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-2xl text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-500/30 hover:border-blue-400/50 group-hover/btn:scale-105 cursor-pointer"
+                  className="w-full group/btn flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-2 px-4 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-300 border border-blue-500/30 hover:border-blue-400/50 group-hover/btn:scale-105 cursor-pointer"
                 >
                   <span>{lang === 'en' ? 'Learn More' : 'विस्तार से जानें'}</span>
-                  <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </button>

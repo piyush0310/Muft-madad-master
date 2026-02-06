@@ -155,8 +155,8 @@ function MedicalTreatmentsContent() {
       <div className="h-20 sm:h-24 md:h-28"></div>
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium uppercase bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-serif font-medium uppercase bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
             {pageTitle}
           </h1>
           <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -167,7 +167,7 @@ function MedicalTreatmentsContent() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4 sm:gap-6 lg:gap-8 mb-20">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-9 gap-4 sm:gap-6 lg:gap-8 mb-10">
           {treatments.map((treatment, index) => (
             <TreatmentItem
               key={index}
@@ -179,35 +179,35 @@ function MedicalTreatmentsContent() {
         </div>
       </section>
 
-      <section className="bg-white/80 backdrop-blur-sm border-t border-gray-200 ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-20">
+      <section className="bg-white/80 backdrop-blur-sm ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             <div className="group text-center">
-              <div className="text-4xl sm:text-5xl font-black text-gray-900 mb-4 bg-linear-to-r from-green-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-4xl  font-medium text-gray-900 mb-4 bg-linear-to-r from-green-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={1000} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700">{stats.consulted}</p>
+              <p className="text-lg sm:text-xl font-medium text-gray-700">{stats.consulted}</p>
             </div>
 
             <div className="group text-center">
-              <div className="text-4xl sm:text-5xl font-black text-gray-900 mb-4 bg-linear-to-r from-orange-500 to-red-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-4xl font-medium text-gray-900 mb-4 bg-linear-to-r from-orange-500 to-red-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={200} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700">{stats.surgeries}</p>
+              <p className="text-lg sm:text-xl  font-medium text-gray-700">{stats.surgeries}</p>
             </div>
 
             <div className="group text-center">
-              <div className="text-4xl sm:text-5xl font-black text-gray-900 mb-4 bg-linear-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-4xl font-medium text-gray-900 mb-4 bg-linear-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={5} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700">{stats.cities}</p>
+              <p className="text-lg sm:text-xl  font-medium text-gray-700">{stats.cities}</p>
             </div>
 
             <div className="group text-center">
-              <div className="text-4xl sm:text-5xl font-black text-gray-900 mb-4 bg-linear-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
+              <div className="text-4xl font-medium text-gray-900 mb-4 bg-linear-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500">
                 <CountUp end={12} suffix="+" />
               </div>
-              <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700">{stats.hospitals}</p>
+              <p className="text-lg sm:text-xl font-semibold text-gray-700">{stats.hospitals}</p>
             </div>
           </div>
         </div>

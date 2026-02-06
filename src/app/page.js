@@ -13,13 +13,10 @@ const Page = () => {
       <Suspense fallback={null}>
         <Navbar />
       </Suspense>
-
       <Heropage />
-      
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <MedicalTreatmentsPage />
       </Suspense>
-      
       <OurSpecialities />
       <WhyChooseMuftMadad />
       <PatientTestimonials />
